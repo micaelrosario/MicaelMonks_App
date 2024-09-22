@@ -1,11 +1,11 @@
 package com.example.micael_monks
 
 import android.os.Bundle
-import android.os.Looper
 import android.os.Handler
+import android.os.Looper
 import android.content.Intent
 import android.view.WindowManager
-import androidx.activity.enableEdgeToEdge
+import android.view.View // Import necessário
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -13,10 +13,12 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.util.Pair
+import androidx.core.app.ActivityOptionsCompat
 
 class MainActivity : AppCompatActivity() {
 
-    // Variables
+    // Variáveis para as animações e views
     lateinit var topAnim: Animation
     lateinit var bottomAnim: Animation
     lateinit var image: ImageView
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-        enableEdgeToEdge()
+
         setContentView(R.layout.activity_main)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -38,24 +40,32 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Animation
+        // Inicializando as animações
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_animation)
         bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_animation)
 
-        // Hooks
+        // Hooks para os elementos da UI
         image = findViewById(R.id.imageView)
-        logo = findViewById(R.id.logo)
-        slogan = findViewById(R.id.slogan)
+        logo = findViewById(R.id.logo_text)
+        slogan = findViewById(R.id.slogan_text)
 
-        // Set animations
+        // Definindo animações
         image.startAnimation(topAnim)
         logo.startAnimation(bottomAnim)
         slogan.startAnimation(bottomAnim)
 
+        // Usando Handler para atraso de 5 segundos e iniciar a próxima Activity com animação
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, Login::class.java)
-            startActivity(intent)
-            finish()
-        }, 5000)
+
+            // Usando Pair para as animações de transição
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                this,
+                Pair(image as View, "img_carro"),
+                Pair(logo as View, "logo_text")
+            )
+
+            startActivity(intent, options.toBundle())
+        }, 5000) // 5 segundos de delay
     }
 }
