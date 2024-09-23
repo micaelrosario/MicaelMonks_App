@@ -14,8 +14,8 @@
         <!-- ImageView com contentDescription para acessibilidade -->
         <ImageView
                 android:id="@+id/logo_image"
-                android:layout_width="150dp"
-                android:layout_height="152dp"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
                 android:src="@drawable/img_carro"
                 android:transitionName="img_carro"
                 android:contentDescription="Logotipo do aplicativo, imagem de um carro" />
@@ -107,6 +107,7 @@
                         android:layout_gravity="right" android:textSize="18sp"/>
 
                 <Button
+                        android:id="@+id/signup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"

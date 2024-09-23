@@ -66,6 +66,6 @@ class MainActivity : AppCompatActivity() {
             )
 
             startActivity(intent, options.toBundle())
-        }, 5000) // 5 segundos de delay
+        }, 3500) // 3 segundos de delay
     }
 }
