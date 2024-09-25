@@ -25,7 +25,7 @@ class Cadastro : AppCompatActivity() {
         setContentView(binding.root)
 
         // Criando o banco de dados e a tabela
-        createDb()
+        //createDb()
 
         // Definindo os listeners para os botões
         binding.regBtn.setOnClickListener {
@@ -36,7 +36,7 @@ class Cadastro : AppCompatActivity() {
             val senha = binding.regSenha.editText?.text.toString()
 
             // Enviar os dados para a tela de confirmação
-            val intent = Intent(this, ConfirmacaoDados::class.java)
+            val intent = Intent(this, Agradecimento::class.java)
             intent.putExtra("nome_completo", nomeCompleto)
             intent.putExtra("usuario", usuario)
             intent.putExtra("email", email)
@@ -50,7 +50,7 @@ class Cadastro : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
+/*
     // Função para criar o banco de dados e a tabela de cadastro
     private fun createDb() {
         val folder = File(getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).toString() + "/Database")
@@ -76,7 +76,7 @@ class Cadastro : AppCompatActivity() {
     }
 
     // Função para salvar os dados de cadastro no banco de dados
-    /*private fun registerUser() {
+    private fun registerUser() {
         val name = binding.regName.editText?.text.toString()
         val username = binding.regUsername.editText?.text.toString()
         val email = binding.regEmail.editText?.text.toString()

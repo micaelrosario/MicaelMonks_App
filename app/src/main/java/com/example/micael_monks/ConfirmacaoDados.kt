@@ -2,19 +2,19 @@ package com.example.micael_monks
 
 import android.content.Intent
 import android.database.Cursor
-import android.database.sqlite.SQLiteDatabase
+//import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.micael_monks.databinding.ActivityConfirmacaoDadosBinding
-import com.example.micael_monks.DatabaseHelper
-import android.widget.Toast
+import com.example.micael_monks.databinding.ActivityLoginBinding
+
+//import com.example.micael_monks.DatabaseHelper
+//import android.widget.Toast
 
 class ConfirmacaoDados : AppCompatActivity() {
 
     private lateinit var binding: ActivityConfirmacaoDadosBinding
-    private lateinit var dbHelper: DatabaseHelper
-    private lateinit var db: SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,7 @@ class ConfirmacaoDados : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
-
+/*
         // Inicialize o DatabaseHelper
         dbHelper = DatabaseHelper(this)
         db = dbHelper.readableDatabase
@@ -41,14 +41,14 @@ class ConfirmacaoDados : AppCompatActivity() {
 
             Toast.makeText(this, "Usuário não encontrado", Toast.LENGTH_SHORT).show()
         }
-
+*/
         // Listener para o botão "Finalizar"
         binding.btnFinalizar.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
-
+/*
     // Função para buscar os dados do usuário no banco
     private fun getUserData(username: String) {
         val query = "SELECT * FROM Users WHERE reg_username = ?"
@@ -75,5 +75,5 @@ class ConfirmacaoDados : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         db.close() // Fechar o banco de dados ao destruir a Activity
-    }
+    }*/
 }

@@ -16,7 +16,7 @@ import java.io.File
 class Login : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
-    private var db: SQLiteDatabase? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,9 +46,11 @@ class Login : AppCompatActivity() {
 
         // Listener para o botão de login
         binding.comecar.setOnClickListener {
-            validateLogin()
+            //validateLogin()
+            val intent = Intent(this, ConfirmacaoDados::class.java)
+            startActivity(intent)
         }
-
+/*
         // Abrir o banco de dados (o mesmo utilizado na tela de cadastro)
         val folder = getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).toString() + "/Database"
         val myFile = File(folder, "Cadastro.db")
@@ -77,5 +79,5 @@ class Login : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Por favor, preencha todos os campos!", Toast.LENGTH_LONG).show()
         }
-    }
+    */}
 }
