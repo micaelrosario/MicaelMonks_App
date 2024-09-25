@@ -9,7 +9,7 @@
         tools:context=".Cadastro"
         android:orientation="vertical"
         android:background="#fff"
-        android:padding="20dp">
+        android:paddingHorizontal="20dp">
 
     <!-- Imagem de logotipo -->
     <ImageView
@@ -51,7 +51,7 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name"
+                android:id="@+id/reg_name"
                 android:hint="Nome Completo"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -66,7 +66,7 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/username"
+                android:id="@+id/reg_username"
                 android:hint="Usuário"
                 app:counterEnabled="true"
                 app:counterMaxLength="15"
@@ -83,7 +83,7 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/email"
+                android:id="@+id/reg_email"
                 android:hint="Email"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -98,7 +98,7 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/phone"
+                android:id="@+id/reg_phone"
                 android:hint="Número de Telefone"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -113,7 +113,7 @@
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/senha"
+                android:id="@+id/reg_senha"
                 android:hint="Senha"
                 app:passwordToggleEnabled="true"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -136,11 +136,11 @@
             android:elevation="0dp"
             android:text="COMEÇAR"
             android:textColor="#fff"
-            android:textSize="18sp"/>
+            android:textSize="18sp" android:id="@+id/reg_btn" />
 
     <!-- Botão para novo usuário -->
     <Button
-            android:id="@+id/cadastro"
+            android:id="@+id/reg_login_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
@@ -149,7 +149,8 @@
             android:text="Já tem uma conta? Faça Login"
             android:textColor="#000"
             android:fontFamily="@font/antic"
-            android:textSize="13sp"
-            android:textStyle="bold"/>
+            android:textSize="14sp"
+            android:textStyle="bold" android:onClick="registerUser"
+            android:layout_marginBottom="50dp"/>
 
 </LinearLayout>

@@ -97,6 +97,7 @@
                         android:layout_gravity="right"/>
 
                 <Button
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
@@ -104,7 +105,8 @@
                         android:elevation="0dp"
                         android:text="COMEÇAR"
                         android:textColor="#fff"
-                        android:layout_gravity="right" android:textSize="18sp"/>
+                        android:layout_gravity="right"
+                        android:textSize="18sp" android:id="@+id/comecar"/>
 
                 <Button
                         android:id="@+id/signup"
@@ -116,7 +118,8 @@
                         android:text="Novo Usuário? Cadastre-se"
                         android:textColor="#000"
                         android:layout_gravity="right"
-                        android:fontFamily="@font/antic" android:textSize="13sp" android:textStyle="bold"/>
+                        android:fontFamily="@font/antic" android:textSize="13sp"
+                        android:textStyle="bold"/>
 
         </LinearLayout>
 

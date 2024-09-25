@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "962620038093",
+    "project_id": "micaelmonks",
+    "storage_bucket": "micaelmonks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:962620038093:android:deae8fa9ab894ec7d50284",
+        "android_client_info": {
+          "package_name": "com.example.micael_monks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6-_nnJ1rYS5CjM_T1ezjrEtJrtEryI3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

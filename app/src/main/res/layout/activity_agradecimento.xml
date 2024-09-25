@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#fff"
+        tools:context=".Agradecimento">
+
+    <!-- Texto de Agradecimento -->
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp" android:id="@+id/imageView"
+            android:src="@drawable/img_carro"
+    />
+    <TextView
+            android:text="Monks"
+            android:layout_width="405dp"
+            android:layout_height="146dp" android:id="@+id/logo_text"
+            android:textSize="70sp"
+            android:textColor="@color/orange" android:fontFamily="@font/bungee"
+            android:textAlignment="center"
+            />
+    <TextView
+            android:id="@+id/thank_you_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Obrigado por se cadastrar!"
+            android:textSize="24sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="50dp"/>
+
+    <!-- Botão para voltar à tela de login -->
+    <Button
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar ao Login"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/orange"
+            android:textColor="#fff"/>
+
+</LinearLayout>
