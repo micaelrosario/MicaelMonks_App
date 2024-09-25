@@ -37,7 +37,9 @@
             android:text="Inscreva-se para iniciar sua nova jornada"
             android:textSize="15sp"
             android:fontFamily="@font/antic"
-            android:layout_marginTop="-20dp"/>
+            android:layout_marginTop="-20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
     <!-- Container para os campos de formulário -->
     <LinearLayout
@@ -53,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/reg_name"
                 android:hint="Nome Completo"
+                android:textColorHint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -69,6 +72,7 @@
                 android:id="@+id/reg_username"
                 android:hint="Usuário"
                 app:counterEnabled="true"
+                android:textColorHint="@color/black"
                 app:counterMaxLength="15"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -85,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/reg_email"
                 android:hint="Email"
+                android:textColorHint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -100,6 +105,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/reg_phone"
                 android:hint="Número de Telefone"
+                android:textColorHint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -116,6 +122,7 @@
                 android:id="@+id/reg_senha"
                 android:hint="Senha"
                 app:passwordToggleEnabled="true"
+                android:textColorHint="@color/black"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText

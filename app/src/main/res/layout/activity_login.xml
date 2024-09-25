@@ -40,7 +40,9 @@
                 android:textSize="18sp"
                 android:transitionName="slogan_text"
                 android:fontFamily="@font/antic"
-                android:paddingStart="5dp" />
+                android:paddingStart="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
         <!-- LinearLayout para os campos de login e senha -->
         <LinearLayout
@@ -58,6 +60,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/username"
                         android:hint="Usuário"
+                        android:textColorHint="@color/black"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -74,6 +77,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/password"
                         android:hint="Senha"
+                        android:textColorHint="@color/black"
                         app:passwordToggleEnabled="true"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
